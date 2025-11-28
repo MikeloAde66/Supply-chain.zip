@@ -1,0 +1,26 @@
+{
+    "name": "Supply Chain Automation v1.0",
+    "nodes": [
+        {
+            "type": "trigger",
+            "name": "Low Inventory Trigger",
+            "app": "Google Sheets"
+        },
+        {
+            "type": "function",
+            "name": "Generate Purchase Order",
+            "script": "return {...};"
+        },
+        {
+            "type": "http_request",
+            "name": "Send Order to Supplier",
+            "url": "https://supplier-api.com/order",
+            "method": "POST"
+        },
+        {
+            "type": "database",
+            "name": "Update Inventory",
+            "app": "Google Sheets"
+        }
+    ]
+}
